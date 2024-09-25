@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<!--
+    Author : Anna Brandenstein and Rena Ahn
+    File   : index.html (HTML)
+    Version 2
+    Last Updated : September 24th, 2024
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Philosopher Quiz</title>
+    <link rel="icon" href="images/theThinker1.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <div>
+            <div class="toolTip">
+                <span class="tipText">i</span>
+                <div class="toolText">
+                    <p>
+                    “<a href="https://thenounproject.com/icon/the-thinker-57467/">The Thinker</a>”
+                    by <a href="https://thenounproject.com/creator/nuno.lezon">Nuno Lezon</a>
+                    from <a href="https://thenounproject.com/">The Noun Project</a>.
+                    Licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
+                    </p>
+                </div>
+            </div>
+            <img src="images/theThinker1.png" atl="the thinker image">
+        </div>
+        <div class="headerText">
+        <h1 class="title">Philosophers Quiz</h1>
+        <h2 class="subtitle">Which Philosopher are you?</h2>
+        </div>
+    </header>
+  
+    <main>
+        <section id="resultSection">
+            <h1 class="resultTitle">Results:</h1>
+            <div class="philResults">
+            <h3 class="rTitle">You are 
+                <b><span id="nameText"></span></b>
+                <span id="timeText"></span>
+            </h3>
+            <img id="faceImage" src="" alt="">
+            <p class="caption">
+                “<a id="imageTitle" href=""></a>”
+                by <a id="imageAuthor" href=""></a>.
+                Licensed under <a id="imageLicense" href=""></a>.
+            </p>
+
+            <h5 class="quote"><i>“<span id="quoteText"></span>”</i></h5>
+            <h4>
+                <b>Main Philosophy: </b>
+                <span id="focusText"></span>
+            </h4>
+            <h4 id="descriptionText"></h4>
+            <h4>
+                <b>Notable Writings: </b>
+                <div id="writingsContainer">
+                </div>
+            </h4>
+            <h4>
+                <b>Fun Fact: </b>
+                <span id="factText"></span>
+            </h4>
+            </div>
+        </section>  
+
+        <form class="quizContainer">
+        <div class="question q1">
+            <h3 class="qText">1. How much control do you have on your life?</h3>
+            <label>
+                <input type="radio" name="q1" value="descartes">
+                <b>A.</b> Absolute control; being able to think grants me total power over my life.
+            </label>
+            <label>
+                <input type="radio" name="q1" value="camus">
+                <b>B.</b> Some control; we cannot control our future for it is uncertain, but we can learn to find happiness in our present lives
+            </label>
+            <label>
+                <input type="radio" name="q1" value="foucault">
+                <b>C.</b> No control; we are a product of the things we watch, learn, and interact with daily.
+            </label>
+        </div>
+        <div class="question q2">
+            <h3 class="qText">2. How do you know that you exist?</h3>
+            <label>
+                <input type="radio" name="q2" value="descartes">
+                <b>A.</b> To possess the ability to think is enough to confirm that I exists; thinking is like consciousness.
+            </label>
+            <label>
+                <input type="radio" name="q2" value="camus">
+                <b>B.</b> By being able to attain happiness and knowing life&apos;s inevitability of death, I can be sure that I exist.
+            </label>
+            <label>
+                <input type="radio" name="q2" value="foucault">
+                <b>C.</b> If brands and corporations try so hard to influence and market to my interests wherever I am, from tv commercials to Instagram followers, there&apos;s no doubt that I exists.
+            </label>
+        </div>
+        <div class="question q3">
+            <h3 class="qText">3. How is your identity shaped?</h3>
+            <label>
+                <input type="radio" name="q3" value="descartes">
+                <b>A.</b> What I think ( which determines how I act, the things that I say, the things that I wear, the things that I like and dislike, etc.) shapes who I am.
+            </label>
+            <label>
+                <input type="radio" name="q3" value="camus">
+                <b>B.</b> My identity is shaped based on my interests, the things that make me happy.
+            </label>
+            <label>
+                <input type="radio" name="q3" value="foucault">
+                <b>C.</b> Identity is controlled by the outside world rather than by myself; social media, the things taught in school, the things I like to buy, and my health for example defines my identity.
+            </label>
+        </div>
+        <div class="question q4">
+            <h3 class="qText">4. How do you feel about brands/corporations like Apple, Coca-Cola, and Nike?</h3>
+            <label>
+                <input type="radio" name="q4" value="descartes">
+                <b>A.</b> Maybe they don&apos;t actually exist; I&apos;ve never stepped into their companies or worked for them so I can&apos;t be sure that they are real.
+            </label>
+            <label>
+                <input type="radio" name="q4" value="camus">
+                <b>B.</b> They sell products that improve my life, either practically or leisurely, which makes me happy.
+            </label>
+            <label>
+                <input type="radio" name="q4" value="foucault">
+                <b>C.</b> They are evil; they try to make themselves look fun, cool, innocent, and beneficial for my life, but they actually take control of my life entirely, trying to make me buy their things. I am reduced to a slave under them.
+            </label>
+        </div>
+        <div class="question q5">
+            <h3 class="qText">5. What is certain about life?</h3>
+            <label>
+                <input type="radio" name="q5" value="descartes">
+                <b>A.</b> It is certain that I am thinking and that therefore, I exist.
+            </label>
+            <label>
+                <input type="radio" name="q5" value="camus">
+                <b>B.</b> It is certain that life is absurd and that the only certainty of our future is our death.
+            </label>
+            <label>
+                <input type="radio" name="q5" value="foucault">
+                <b>C.</b> It is certain there is an authoritative body that exercises power to control what we pursue as knowledge and success.
+            </label>
+        </div>
+        <div class="question q6">
+            <h3 class="qText">6. Your professor returns your graded history test. Receiving it, you look at your score written on the top. Your test results are miserable. What is your response?</h3>
+            <label>
+                <input type="radio" name="q6" value="descartes">
+                <b>A.</b> Denial; How can I be certain that the results of the history test are true? Perhaps my perceptions are tricking me and I am in a dream.
+            </label>
+            <label>
+                <input type="radio" name="q6" value="camus">
+                <b>B.</b> Acceptance; It was uncertain whether my efforts would have granted me the results I wanted. Perhaps this was how it would have turned out either way and I should make do with my situation.
+            </label>
+            <label>
+                <input type="radio" name="q6" value="foucault">
+                <b>C.</b> Follow the rules and procedures to raise my test result or my grade through later examinations in order to follow the expectations of a good student that are raised by the school, other institutions, and society.
+            </label>
+        </div>
+        <div class="question q7">
+            <h3 class="qText">7. Happiness is a social construct; I only know that I exist so how can I believe that there are external things that can make me “happy”.</h3>
+            <label>
+                <input type="radio" name="q7" value="descartes">
+                <b>A.</b> Happiness is a social construct; I only know that I exist so how can I believe that there are external things that can make me “happy”.
+            </label>
+            <label>
+                <input type="radio" name="q7" value="camus">
+                <b>B.</b> No matter what life throws at me, good or bad, it is up to me to either view the circumstance in a half full or half empty way; my happiness is determined by me.
+            </label>
+            <label>
+                <input type="radio" name="q7" value="foucault">
+                <b>C.</b> True happiness doesn&apos;t exist in life. What we are led to believe happiness is is just ideas we have been taught to think are happy by school (like having a good job or raising a family) and/or by brands and social media (like beating a video game or wearing the current trend&apos;s clothing).
+            </label>
+        </div>
+        <div class="question q8">
+            <h3 class="qText">8. You watch the news one night and they report that a new drug that was designed to make people taller failed in lab testing. How do you feel about this news?</h3>
+            <label>
+                <input type="radio" name="q8" value="descartes">
+                <b>A.</b> I am very curious as to how they designed this drug. What chemicals did they use? Are they going to continue efforts to make this drug using different strategies and/or chemicals?
+            </label>
+            <label>
+                <input type="radio" name="q8" value="camus">
+                <b>B.</b> Life is absurd so of course such an ambitious drug failed. With life&apos;s many obstacles and challenges, achieving a successful end result is hard and rare.
+            </label>
+            <label>
+                <input type="radio" name="q8" value="foucault">
+                <b>C.</b> Is being short really a bad thing or is it just a concept that the science field as well as social media have developed that has influenced our mindset on height? Someone being short is not a bad thing and therefore this drug is pointless.
+            </label>
+        </div>
+        <div class="question q9">
+            <h3 class="qText">9. You read an article about an influencer who got canceled for stating a controversial opinion. What do you think about the cancel culture?</h3>
+            <label>
+                <input type="radio" name="q9" value="descartes">
+                <b>A.</b> I understand where it comes from. Some people state things that I cannot understand and that should not be perceived as truth. They challenge my conclusions about myself and my existence.
+            </label>
+            <label>
+                <input type="radio" name="q9" value="camus">
+                <b>B.</b> It is another aspect that demonstrates the absurdity of life. People who have built their careers over years and decades can lose it in a matter of days.
+            </label>
+            <label>
+                <input type="radio" name="q9" value="foucault">
+                <b>C.</b> It demonstrates the strength of the power exercised by the authoritative body. People who stray from the path determined by authority are brought down and removed from society&apos;s view.
+            </label>
+        </div>
+        <div class="question q10">
+            <h3 class="qText">10. While having a conversation with a classmate, the classmate said something heavily against your morals. You cannot comprehend why they would think as such and got into an argument with that classmate, leaving you very upset. How would you respond?</h3>
+            <label>
+                <input type="radio" name="q10" value="descartes">
+                <b>A.</b> Avoidant; I am certain that I am thinking and following my morals, and that they exist. Why should I have to interact with a being that goes against my thoughts, and that follows morals that I cannot prove?
+            </label>
+            <label>
+                <input type="radio" name="q10" value="camus">
+                <b>B.</b> Cooperative; Life is absurd, and not everything flows the way I imagine it to. As such, conflicts and arguments are a natural part of life. If the time comes to reconcile, it will happen so for now, I should do what I can do for myself.
+            </label>
+            <label>
+                <input type="radio" name="q10" value="foucault">
+                <b>C.</b> Conciliatory; Conflicts and arguments are not looked upon fondly by the school or society. Rather, it is advised that people maintain good relationships with others. Therefore, I should find a way to resolve the issue as fast as possible.
+            </label>
+        </div>
+        </form>
+
+        <div id="buttonContainer">
+            <button id="submitBtn" type="submit"><b>Submit Quiz</b></button>
+        </div>
+    </main>
+  </body>
+</html>
